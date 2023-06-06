@@ -11,6 +11,12 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+.parentDiv {  
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+} 
+
 /**
  * Remove default margin.
  */
