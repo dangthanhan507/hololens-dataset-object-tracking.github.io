@@ -50,22 +50,49 @@
 
   <main id="content" class="main-content" role="main">
 
-    <p>We have 12 scenes in total with 5 sequences collected per scene. This leaves us with 60 sequences total.</p>
+    <p>This site hosts a 3d object tracking dataset focused on working with egocentric data. We utilize the Microsoft Hololens2 and its vast sensor suite to collect 12 different scenes. In addition, we will provide 3 types of annotations 
+      to work with. The first annotation per-frame 3d object location. The second annotation is an object's binary state of static/dynamic where "static" pertains to an object not moving and a "dynamic" state referring to an
+    object currently being interacted by the camera wearer. The third annotation is the per-frame bounding box in each sequence. </p>
 
-    <h3>About Hololens Object Tracking Dataset</h3>
+    <h1>EgoTrack3D Available Data</h3>
     <div style="display:grid; grid-template-columns: 1fr 1fr;">
       <div>
-        <h5>Data Modalities</h5>
+        <h5>Sensor Suite</h5>
         <ul>
-          <li>bullet point 1</li>
-          <li>bullet point 2</li>
+          <li>1 RGB Camera (1280x720) @ 30 fps</li>
+          <li>4 VLC Grayscale Cameras (640x480) @ 30 fps</li>
+          <li>1 ToF Camera Ahat (512x512) @ 45 fps and Longthrow (320x288) @ 5 fps</li>
         </ul>
       </div>
       <div>
-        <h5>Data Modalities</h5>
+        <h5>Additional Estimated Information</h5>
         <ul>
-          <li>bullet point 1</li>
-          <li>bullet point 2</li>
+          <li>Base Map</li>
+          <li>Camera Pose</li>
+          <li>Sensor Intrinsics/Extrinsics</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Scene Information</h3>
+    <p>For each scene we collect 5 regular sequences and 1 SLAM sequence. All sensors are collected to use its most recent information relative to the RGB camera.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr;">
+      <div>
+        <h5>Regular Sequence</h5>
+        <ul>
+          <li>Base map (.obj)</li>
+          <li>All sensor poses (.json + poses are aligned by timestamp)</li>
+          <li>Sensor data (.png + name describes timestamp) </li>
+          <li>ToF uses Ahat (512x512) @ 45 fps </li>
+        </ul>
+      </div>
+      <div>
+        <h5>SLAM Sequence</h5>
+        <ul>
+          <li>Base map (.obj)</li>
+          <li>All sensor poses (.json + poses are aligned by timestamp)</li>
+          <li>Sensor data (.png + name describes timestamp) </li>
+          <li>ToF uses Longthrow (320x288) @ 5 fps </li>
         </ul>
       </div>
     </div>
