@@ -34,7 +34,12 @@
 <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
 
 <!-- end custom head snippets -->
-
+<head>
+  <style>
+    .image-container {
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -57,7 +62,7 @@
     <h1>EgoTrack3D Available Data</h3>
     <div style="display:grid; grid-template-columns: 1fr 1fr;">
       <div>
-        <h5>Sensor Suite</h5>
+        <h2>Sensor Suite</h2>
         <ul>
           <li>1 RGB Camera (1280x720) @ 30 fps</li>
           <li>4 VLC Grayscale Cameras (640x480) @ 30 fps</li>
@@ -65,7 +70,7 @@
         </ul>
       </div>
       <div>
-        <h5>Additional Estimated Information</h5>
+        <h2>Additional Estimated Information</h2>
         <ul>
           <li>Base Map</li>
           <li>Camera Pose</li>
@@ -74,24 +79,28 @@
       </div>
     </div>
 
-    <h3>Scene Information</h3>
+    <div class="image-container">
+      <img src="data_annot_visuals_v3.png" alt="Centered A Div">
+    </div>
+
+    <h1>Scene Information</h1>
     <p>For each scene we collect 5 regular sequences and 1 SLAM sequence. All sensors are collected to use its most recent information relative to the RGB camera.</p>
     <div style="display:grid; grid-template-columns: 1fr 1fr;">
       <div>
-        <h5>Regular Sequence</h5>
+        <h2>Regular Sequence</h2>
         <ul>
           <li>Base map (.obj)</li>
-          <li>All sensor poses (.json + poses are aligned by timestamp)</li>
-          <li>Sensor data (.png + name describes timestamp) </li>
+          <li>All sensor poses (.json)</li>
+          <li>Sensor data (.png) </li>
           <li>ToF uses Ahat (512x512) @ 45 fps </li>
         </ul>
       </div>
       <div>
-        <h5>SLAM Sequence</h5>
+        <h2>SLAM Sequence</h2>
         <ul>
           <li>Base map (.obj)</li>
-          <li>All sensor poses (.json + poses are aligned by timestamp)</li>
-          <li>Sensor data (.png + name describes timestamp) </li>
+          <li>All sensor poses (.json)</li>
+          <li>Sensor data (.png) </li>
           <li>ToF uses Longthrow (320x288) @ 5 fps </li>
         </ul>
       </div>
